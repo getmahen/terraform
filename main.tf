@@ -55,7 +55,8 @@ resource "aws_instance" "web" {
   instance_type          = "t2.micro"
   subnet_id              = "subnet-a2a469e9"
   vpc_security_group_ids = ["sg-2788a154"]
-  count                  = "${var.instance_count}" #CREATES TWO INSTANCES
+  #count                  = "${var.instance_count}" #CREATES TWO INSTANCES
+  count                  = 4 #CREATES TWO INSTANCES
 
   tags {
     "Identity" = "NWI-vault-pony"
